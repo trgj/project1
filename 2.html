@@ -4,6 +4,67 @@
   <head>
     <title>My First Project-STORE</title>
     <meta charset="utf-8">
+    <style>
+      .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .container::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: url("background.jpg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+      }
+
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        font-style: italic;
+        border-bottom: 2px gray solid;
+        margin: 0;
+        padding: 20px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      ol {
+        font-size: 25px;
+        border-right: 2px gray solid;
+        width: 170px;
+        margin: 0px;
+      }
+
+      #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+
+      @media(max-width:800px) {
+        #grid {
+          display: block;
+        }
+
+        ol {
+          border-right: none;
+        }
+
+        h1 {
+          border-bottom: none;
+        }
+      }
+
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XPGHJP4SN"></script>
     <script>
@@ -20,25 +81,30 @@
   </head>
 
   <body>
-    <h1><a href="index.html">TRGJ SNEAKER OUTLET</a></h1>
-    <ol>
-      <li><a href="1.html">ABOUT</a></li>
-      <li><a href="2.html">STORE</a></li>
-      <li><a href="3.html">LIVE STREAM</a></li>
-    </ol>
-    <h2>STORE</h2>
-
-    <h3>"Your trusted seller of <a href="https://www.dictionary.com/browse/preloved" target="_blank" title="preloved specification">preloved</a> but <strong>
-        <u>brand new quality</u>
-      </strong> authentic shoes"</h3>
-    <p><iframe width="727" height="409" src="https://www.youtube.com/embed/6rkUKF_00lU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
-
-    <p style="margin-top:45px;">TRGJ Sneaker Outlet is your trusted seller of affordable, reasonable and original branded thrift shoes in the Philippines since 2014.
-    </p>
-    <img src="shoes_unsplash.jpg" width="100%">
+    <div class="container">
+      <h1><a href="index.html" style="color:red;">TRGJ SNEAKER OUTLET</a></h1>
+      <div id="grid">
+        <ol>
+          <li><a href="1.html">ABOUT</a></li>
+          <li><a href="2.html">STORE</a></li>
+          <li><a href="3.html">LIVE STREAM</a></li>
+        </ol>
+        <div>
 
 
+          <h2>STORE</h2>
+
+          <h3>"Your trusted seller of <a href="https://www.dictionary.com/browse/preloved" target="_blank" title="preloved specification">preloved</a> but <strong>
+              <u>brand new quality</u>
+            </strong> authentic shoes"</h3>
+          <p><iframe width="727" height="409" src="https://www.youtube.com/embed/6rkUKF_00lU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+          <p style="margin-top:45px;">TRGJ Sneaker Outlet is your trusted seller of affordable, reasonable and original branded thrift shoes in the Philippines since 2014.
+          </p>
+          <img src="shoes_unsplash.jpg" width="950px">
+        </div>
+      </div>
+    </div>
     <div id="disqus_thread"></div>
     <script>
       /**
